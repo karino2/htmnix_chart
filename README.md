@@ -1,7 +1,7 @@
 
 
 Embed chart.js in webview to use from command line.
-Setting json is read from stdin.
+Data and config json is read from stdin.
 
 ## Usage
 
