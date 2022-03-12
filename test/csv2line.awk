@@ -9,11 +9,10 @@ BEGIN {
     print "    \"data\": ["
 }
 
-NR == 2 {
+NR >= 2 {
+    if (NR > 2) printf(",")
+    gsub(/"/, "\\\"", $1)
     printf("{\"x\":\"%s\", \"y\": %s}\n", $1, $2)
-}
-NR > 2 {
-    printf(",{\"x\":\"%s\", \"y\": %s}\n", $1, $2)
 }
 
 
